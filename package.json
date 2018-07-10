@@ -1,0 +1,22 @@
+{
+  "name": "bsod-element",
+  "version": "1.0.0",
+  "description": "Blue screen of death",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alenaksu/bsod-element.git"
+  },
+  "keywords": [
+    "bsod"
+  ],
+  "author": "alenaksu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alenaksu/bsod-element/issues"
+  },
+  "homepage": "https://github.com/alenaksu/bsod-element#readme"
+}
