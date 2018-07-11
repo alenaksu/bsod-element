@@ -1,6 +1,6 @@
 {
   "name": "bsod-element",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Blue screen of death",
   "module": "src/index.js",
   "main": "lib/bsod-element.js",
