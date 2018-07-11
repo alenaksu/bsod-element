@@ -3,9 +3,9 @@
   "version": "1.0.2",
   "description": "Blue screen of death",
   "module": "src/index.js",
-  "main": "lib/index.js",
+  "main": "lib/bsod-element.js",
   "scripts": {
-    "build": "parcel build src/index.js -d ./lib",
+    "build": "yarn babel src/index.js --out-file lib/bsod-element.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/alenaksu/bsod-element/issues"
   },
-  "homepage": "https://github.com/alenaksu/bsod-element#readme"
+  "homepage": "https://github.com/alenaksu/bsod-element#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.53",
+    "@babel/core": "^7.0.0-beta.53",
+    "@babel/preset-env": "^7.0.0-beta.53"
+  }
 }
