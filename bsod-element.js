@@ -7,9 +7,6 @@ class BsodElement extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
             .bsod {
-                --priamry-color-dark: #061c43;
-                --priamry-color: #093e9e;
-            
                 display: flex;
                 text-align: center;
                 z-index: 9999;
@@ -36,7 +33,7 @@ class BsodElement extends HTMLElement {
                 font-size: 16px;
                 line-height: 18px;
                 display: inline;
-                margin: 40px 0px;
+                margin: 0 0 40px;
                 text-align: center;
             }
             .text {

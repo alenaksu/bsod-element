@@ -1,11 +1,12 @@
 {
   "name": "bsod-element",
   "version": "1.0.3",
-  "description": "Blue screen of death",
-  "module": "src/index.js",
-  "main": "lib/bsod-element.js",
+  "description": "Blue Screen of Death for uncaught javascript errors",
+  "module": "bsod-element.js",
+  "main": "bsod-element.es5.js",
   "scripts": {
-    "build": "yarn babel src/index.js --out-file lib/bsod-element.js",
+    "build": "tsc bsod-element.js --allowJs --outFile bsod-element.es5.js",
+    "demo": "parcel demo.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,8 +23,7 @@
   },
   "homepage": "https://github.com/alenaksu/bsod-element#readme",
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.53",
-    "@babel/core": "^7.0.0-beta.53",
-    "@babel/preset-env": "^7.0.0-beta.53"
+    "parcel-bundler": "^1.9.6",
+    "typescript": "^2.9.2"
   }
 }
