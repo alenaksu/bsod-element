@@ -1,6 +1,6 @@
 {
   "name": "bsod-element",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Blue Screen of Death for uncaught javascript errors",
   "module": "bsod-element.js",
   "main": "bsod-element.es5.js",
