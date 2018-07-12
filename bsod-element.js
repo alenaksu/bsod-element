@@ -110,12 +110,12 @@ class BsodElement extends HTMLElement {
         window.document.removeEventListener('keypress', this.close);
     }
 
-    handleError({ message, filename, lineno }) {
+    handleError({ reason, message, filename, lineno, promise }) {
         const template = document.createElement('template');
         template.innerHTML = this.template({
             title: this.title,
-            message,
-            filename,
+            message: reason || message,
+            filename: filename || promise,
             lineno
         });
 
@@ -129,6 +129,7 @@ class BsodElement extends HTMLElement {
 
     connectedCallback() {
         window.addEventListener('error', this.handleError.bind(this));
+        window.addEventListener('unhandledrejection', this.handleError.bind(this));
     }
 }
 window.customElements.define(BsodElement.is, BsodElement);

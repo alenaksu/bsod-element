@@ -59,12 +59,12 @@ var BsodElement = /** @class */ (function (_super) {
         window.document.removeEventListener('keypress', this.close);
     };
     BsodElement.prototype.handleError = function (_a) {
-        var message = _a.message, filename = _a.filename, lineno = _a.lineno;
+        var reason = _a.reason, message = _a.message, filename = _a.filename, lineno = _a.lineno, promise = _a.promise;
         var template = document.createElement('template');
         template.innerHTML = this.template({
             title: this.title,
-            message: message,
-            filename: filename,
+            message: reason || message,
+            filename: filename || promise,
             lineno: lineno
         });
         this.close();
@@ -73,6 +73,7 @@ var BsodElement = /** @class */ (function (_super) {
     };
     BsodElement.prototype.connectedCallback = function () {
         window.addEventListener('error', this.handleError.bind(this));
+        window.addEventListener('unhandledrejection', this.handleError.bind(this));
     };
     return BsodElement;
 }(HTMLElement));
